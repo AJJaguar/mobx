@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobx_examples/examples/form_example/form_example.dart';
 import 'package:mobx_examples/examples/todo_example/todo_example.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TodoExample(),
+      home: const FormExample(),
     );
   }
 }

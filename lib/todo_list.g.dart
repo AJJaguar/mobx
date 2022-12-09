@@ -96,6 +96,64 @@ mixin _$TodoList on _TodoList, Store {
     });
   }
 
+  late final _$_TodoListActionController =
+      ActionController(name: '_TodoList', context: context);
+
+  @override
+  void addTodo(String description) {
+    final _$actionInfo =
+        _$_TodoListActionController.startAction(name: '_TodoList.addTodo');
+    try {
+      return super.addTodo(description);
+    } finally {
+      _$_TodoListActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void removeTodo(Todo todo) {
+    final _$actionInfo =
+        _$_TodoListActionController.startAction(name: '_TodoList.removeTodo');
+    try {
+      return super.removeTodo(todo);
+    } finally {
+      _$_TodoListActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void changeFilter(VisibilityFilter filter) {
+    final _$actionInfo =
+        _$_TodoListActionController.startAction(name: '_TodoList.changeFilter');
+    try {
+      return super.changeFilter(filter);
+    } finally {
+      _$_TodoListActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void removeCompleted() {
+    final _$actionInfo = _$_TodoListActionController.startAction(
+        name: '_TodoList.removeCompleted');
+    try {
+      return super.removeCompleted();
+    } finally {
+      _$_TodoListActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void markAllAsCompleted() {
+    final _$actionInfo = _$_TodoListActionController.startAction(
+        name: '_TodoList.markAllAsCompleted');
+    try {
+      return super.markAllAsCompleted();
+    } finally {
+      _$_TodoListActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
